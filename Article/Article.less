@@ -1,6 +1,12 @@
 .articles {
   margin-top: 95px;
 }
+.menu--shift {
+  margin-left: 22%;
+}
+.menu--shift-art {
+  right: 10%;
+}
 .article {
   margin: 20px 10%;
   padding: 0 20px 25px;
@@ -30,19 +36,29 @@
   }
 
   .expandButton {
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    bottom: -20px;
     left: 50%;
     font-size: 12px;
     color: grey;
     cursor: pointer;
     transform: translate(-50%);
     background-color: white;
-  }
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 1px 2px;
+    }
+  
+
 }
 
 .article-open {
   height: 400px;
+  height: 100%;
+}
+
+.hide {
+  display: none
 }
 
 
