@@ -112,4 +112,75 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
->>>>>>> 85bc58fdef7c8d8a654052a753b72efc2ac59d9e
+
+// const accordion = document.querySelector('.accordion')
+
+
+
+// panelData.forEach(data => {
+//   accordion.appendChild(createPanel(data.title, data.content))
+// })
+
+
+
+
+
+const createArticle = props => {
+  const article = document.createElement('div');
+  const title = document.createElement('h2');
+  const date = document.createElement('p');
+  const firstParagraph = document.createElement('p');
+  const secondParagraph = document.createElement('p');
+  const thirdParagraph = document.createElement('p');
+  const buttonPanel = document.createElement('div');  
+  const button = document.createElement('button');
+  const hide = document.createElement('button');
+
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(buttonPanel);
+  buttonPanel.appendChild(button);
+  buttonPanel.appendChild(hide)
+  
+
+    // set class names
+  article.classList.add('article')
+  date.classList.add('date')
+  // firstParagraph.classList.add('')
+  // secondParagraph.classList.add('')
+  // thirdParagraph.classList.add('')
+  buttonPanel.classList.add('panel-buttons');
+  button.classList.add('expandButton');
+  hide.classList.add('expandButton', 'hide');
+  
+  // set text content
+  button.textContent = 'Expand Article';
+  hide.textContent = 'Hide Article';
+  title.textContent = props.title;
+  date.textContent = props.date;
+  firstParagraph.textContent = props.firstParagraph;
+  secondParagraph.textContent = props.secondParagraph;
+  thirdParagraph.textContent = props.thirdParagraph;
+  
+  buttonPanel.addEventListener('click', e => {
+    button.classList.toggle('hide');
+    hide.classList.toggle('hide');
+    article.classList.toggle('article-open');
+  });
+    
+  
+  return article
+
+}
+
+
+const articles = document.querySelector('.articles');
+
+data.forEach(data => {
+  articles.appendChild(createArticle(data))
+})
+
+

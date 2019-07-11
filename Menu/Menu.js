@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-const toggleMenu = () => {
-    menu.classList.toggle('menu--open');
-    // Toggle the "menu--open" class on your menu refence. 
-    articlesDiv.classList.toggle('menu--shift');
-    // articleDiv.forEach(article => {article.classList.toggle('menu--shift-art')})
-}
-
-
-// Start Here: Create a reference to the ".menu" class
-const menu = document.querySelector(".menu");
-
-// create a reference to the ".menu-button" class
-
-const menuButton = document.querySelector(".menu-button");
-// Using your menuButton reference, add a click handler that calls toggleMenu
-const articlesDiv = document.querySelector('.articles')
-const articleDiv = document.querySelectorAll('.article')
-
-
-// menuButton.addEventListener('click', toggleMenu());
-menuButton.addEventListener('click', () => toggleMenu());
-=======
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
@@ -56,4 +33,4 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
->>>>>>> 85bc58fdef7c8d8a654052a753b72efc2ac59d9e
+
