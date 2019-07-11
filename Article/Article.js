@@ -141,9 +141,9 @@ const createArticle = props => {
   article.appendChild(firstParagraph);
   article.appendChild(secondParagraph);
   article.appendChild(thirdParagraph);
-  article.appendChild(buttonPanel);
-  buttonPanel.appendChild(button);
-  buttonPanel.appendChild(hide)
+  //article.appendChild(buttonPanel);
+  article.appendChild(button);
+  article.appendChild(hide)
   
 
     // set class names
@@ -165,7 +165,7 @@ const createArticle = props => {
   secondParagraph.textContent = props.secondParagraph;
   thirdParagraph.textContent = props.thirdParagraph;
   
-  buttonPanel.addEventListener('click', e => {
+  article.addEventListener('click', e => {
     button.classList.toggle('hide');
     hide.classList.toggle('hide');
     article.classList.toggle('article-open');
